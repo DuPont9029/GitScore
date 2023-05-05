@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>github</title>
+    <style>
+      .centro {
+        text-align: center;
+        
+      }
+       
+      .destra {
+        text-align: right;
+      }
+
+      .image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+      }
+
+      .class {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      .commit {
+        background: #088140;
+        color: #fff;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+      }
+    </style>
+    
+    
+    <script>
+          var cc = 0;
+          async function getCommitCount(username) {
+          try {
+            const url = `https://api.github.com/users/${username}/repos?per_page=1000`;
+            const response = await fetch(url);
+            const repositories = await response.json();
+            
+            let commitCount = 0;
+            
+            for (const repo of repositories) {
+              const repoUrl = `https://api.github.com/repos/${username}/${repo.name}/commits`;
+              const repoResponse = await fetch(repoUrl);
+              const commits = await repoResponse.json();
+              
+              
+              console.log(repo.name)
+              console.log(commits)
+              
+              
+              commitCount += commits.length;
+            }
+            
+            console.log(`Total commits for ${username}: ${commitCount}`);
+            
+            cc = commitCount;
+
+            if (cc == "")
+            {
+              cc = "0"
+
+            }
+
+            return cc;
+            
+          } 
+          
+          catch (error) {
+            console.error('Error:', error.message);
+
+            if (error.message === 'Git Repository is empty.')
+            {
+              cc = 0;
+              return cc;
+            }
+          }
+          
+}
+
+
+
+      
+      
+        getCommitCount('DuPont9029').then(result => document.getElementById('DuPont9029').textContent = cc);
+        getCommitCount('KovD3v').then(result => document.getElementById('KovD3v').textContent = cc);
+        getCommitCount('metoncode').then(result => document.getElementById('metoncode').textContent = cc);
+
+        
+      
+        
+        
+    
+
+
+
+
+
+    </script>
+    
+  </head>
+  
+  <body>
+    <header class="destra">
+      <a href="https://github.com/DuPont9029"><img src="https://raw.githubusercontent.com/DuPont9029/equ2g/main/github.ico" class="class"></a>
+    </header> <br> <br>
+    
+  <div class="centro">
+    <label class="centro"><a href="https://github.com/DuPont9029">DuPont9029</a> public contributions:</label> 
+    <span id="DuPont9029" class="centro"></span>
+    <img src="https://ghchart.rshah.org/b30000/DuPont9029" alt="DuPont9029 Activity" class="image"> </br> </br>
+    
+    <label class="centro"><a href="https://github.com/KovD3v">KovD3v</a> public contributions:</label>
+    <span id="KovD3v" class="centro"></span> 
+    <img src="https://ghchart.rshah.org/FFD43B/KovD3v" alt="KovD3v Activity" class="image"> </br> <br>
+    
+    <label class="centro"><a href="https://github.com/metoncode">metoncode</a> public contributions:</label>
+    <span id="metoncode" class="centro"></span> 
+    <img src="https://ghchart.rshah.org/ff6600/metoncode" alt="metoncode Activity" class="image"> </br>
+    
+  </div>
+    
+  </body>
+</html>
