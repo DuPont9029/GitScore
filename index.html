@@ -2,47 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>github score</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
-    <style>
-      .centro {
-        text-align: center;
-        
-      }
-       
-      .destra {
-        text-align: right;
-      }
-
-      .image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px;
-      }
-
-      .class {
-        width: 40px;
-        height: 40px;
-        object-fit: cover;
-        overflow: hidden;
-      }
-
-      .commit {
-        background: #088140;
-        color: #fff;
-      }
-
-      a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #000;
-      }
-    </style>
-    
-    
+    <title>GitScore</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/DuPont9029/GitScore/main/favicon.ico">
     <script>
-          var cc = 0;
+
+          var cc = 0, x=0, y=0, z=0, h = 0, saveX = 0, saveY = 0, saveZ= 0;
           async function getCommitCount(username) {
           try {
             const url = `https://api.github.com/users/${username}/repos?per_page=1000`;
@@ -81,6 +45,7 @@
               var na = "a";
               cc = ba + cc + na;
               console.log(cc);
+              cc = 0;
             }
 
             return cc;
@@ -95,51 +60,383 @@
               cc = 0;
               return cc;
             }
+
+            if (error.message === 'Not Found')
+            {
+              cc = 0;
+              return cc;
+            }
+
+
+
           }
           
-}
+        }
+
+        
+
+        function i() 
+        {
+            document.getElementById('DuPont9029').textContent = cc;
+            return cc;
+        }
+
+        function ii() {
+            document.getElementById('KovD3v').textContent = cc;
+            return cc;
+        }
+
+        function iii() {
+            document.getElementById('metoncode').textContent = cc;
+            return cc;
+        }
+
+
+        // yandere dev a rapporto
+
+        function iv() { 
+
+          
+            saveX = x;
+            saveY = y;
+            saveZ = z;
+            
+           
+            if (x > y && x > z)
+            {
+              // x è il più grande
+              console.error("1 di 1: " + x + " " + y + " " + z + " " + "quindi DuPont9029 ha lavorato di più");
+              //
+               document.getElementById("1").textContent = "DuPont9029"; 
+              //
+              if (y > z)
+              {
+                // y è il secondo più grande
+                console.error("2 di 1: " + x + " " + y + " " + z + " " + "quindi KovD3v è il secondo che ha lavorato di più");
+                //
+                 y = y + (x - 15); /* valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande */ 
+                //
+                document.getElementById("2").textContent = "KovD3v";
+                //
+                 z = z + (y - 15); // valore arbitrario di 12 per far si che il terzo sia il terzo
+                //
+                document.getElementById("3").textContent = "metoncode";
+              }
+              else
+              {
+                // z è il secondo più grande
+                console.error("3 di 1: " + x + " " + y + " " + z + " " + "quindi metoncode è il secondo che ha lavorato di più");
+
+                 z = z + (x - 15); // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
+
+                document.getElementById("2").textContent = "metoncode";
+
+                 y = y + (z - 15); // valore arbitrario di 12 per far si che il terzo sia il terzo
+
+                document.getElementById("3").textContent = "KovD3v";
+              }
+            }
+
+
+            else if (y > x && y > z)
+            {
+              // y è il più grande
+              console.error("1 di 2: " + x + " " + y + " " + z + " " + "quindi KovD3v ha lavorato di più");
+
+              document.getElementById("1").textContent = "KovD3v";
+              if (x > z)
+              {
+                // x è il secondo più grande
+                console.error("2 di 2: " + x + " " + y + " " + z + " " + "quindi DuPont9029 è il secondo che ha lavorato di più");
+
+                // x = x + y/2; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
+
+                document.getElementById("2").textContent = "DuPont9029";
+
+                // z = z + y/3 // valore arbitrario di 12 per far si che il terzo sia il terzo
+
+                document.getElementById("3").textContent = "metoncode";
+              }
+              else
+              {
+                // z è il secondo più grande
+                console.error("3 di 2: " + x + " " + y + " " + z + " " + "quindi metoncode è il secondo che ha lavorato di più");
+
+                // z = z + y/2; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
+
+                document.getElementById("2").textContent = "metoncode";
+
+                // x = x + y/3; // valore arbitrario di 12 per far si che il terzo sia il terzo
+
+                document.getElementById("3").textContent = "DuPont9029";
+              }
+            }
+
+
+            else if (z > x && z > y)
+            {
+              // z è il più grande
+              console.error("1 di 3: " + x + " " + y + " " + z + " " + "quindi metoncode ha lavorato di più");
+
+              document.getElementById("1").textContent = "metoncode";
+              if (x > y)
+              {
+                // x è il secondo più grande
+                // x = x + z/2; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
+
+                console.error("2 di 3: " + x + " " + y + " " + z + " " + "quindi DuPont9029 è il secondo che ha lavorato di più");
+
+                // y = y + z/3 // valore arbitrario di 12 per far si che il terzo sia il terzo
+
+                document.getElementById("2").textContent = "DuPont9029";
+                document.getElementById("3").textContent = "KovD3v";
+              }
+              else
+              {
+                // y è il secondo più grande
+
+                // y = y + z/2; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
+
+                console.error("3 di 3: " + x + " " + y + " " + z + " " + "quindi KovD3v è il secondo che ha lavorato di più");
+
+                // x = x + z/3; // valore arbitrario di 12 per far si che il terzo sia il terzo
+
+                document.getElementById("2").textContent = "KovD3v";
+                document.getElementById("3").textContent = "DuPont9029";
+              }
+            }
+            else
+            {
+              // due o più numeri sono uguali
+              console.error("error 9029 exists, evaquate the area immediatly")
+            }
+
+            // in case of one
+            
+            if (x == 1)
+            {
+              x = x * 35;
+            }
+            if (y == 1)
+            {
+              y = y * 35;
+            }
+            if (z == 1)
+            {
+              z = z * 35;
+            }
+
+            // in case of less than 15
+
+            if (x < 15 && x > y && x > z)
+            {
+              x = 75;
+              y = 45;
+              z = 10;
+            }
+            if (y < 15 && y > x && y > z)
+            {
+              x = 75;
+              y = 45;
+              z = 10;
+            }
+            if (z < 15)
+            {
+              x = 75;
+              y = 45;
+              z = 10;
+            }
 
 
 
+        }
       
-      
+        
+
+        getCommitCount('DuPont9029').then(result => x = i());
+        getCommitCount('KovD3v').then(result => y = ii());
+        getCommitCount('metoncode').then(result => z = iii());
+    //  getCommitCount('metoncode').then(result => iv());
+        
+
+
+
+        Promise.all([
+          getCommitCount('DuPont9029'),
+          getCommitCount('KovD3v'),
+          getCommitCount('metoncode')
+        ]).then(result => {
+          iv();
+        });
+
+
+      /*
         getCommitCount('DuPont9029').then(result => document.getElementById('DuPont9029').textContent = cc);
         getCommitCount('KovD3v').then(result => document.getElementById('KovD3v').textContent = cc);
-        getCommitCount('metoncode').then(result => document.getElementById('metoncode').textContent = cc);
-
+        getCommitCount('metoncode').then(result => document.getElementById('metoncode').textContent = cc);    
         
+      */
+        
+
+
+                
+           
+
+
       
-        
-        
-    
+        setInterval(() => { 
+            // document.getElementById("1").innerHTML = "KovDev"
+            const numbers = [x, y, z]; // replace with your own numbers
+            const scale = 1.7; // fattore di scala per aumentare l'altezza delle barre  4
 
+            const sortedNumbers = numbers.map(number => number * scale).sort((a, b) => b - a);
 
+            const bars = document.querySelectorAll('.bar');
+
+            bars.forEach((bar, index) => {
+                bar.style.height = `${sortedNumbers[index]}px`;
+            });
+            }, 3000);
 
 
 
     </script>
+
     
+
+    <style>
+        .centro {
+        text-align: center;
+        
+      }
+       
+      .destra {
+        text-align: right;
+      }
+
+      .image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+      }
+
+      .class {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      .commit {
+        background: #088140;
+        color: #fff;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+      }
+
+
+      .ninjo {
+        color: #000;
+      }
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+        .podium {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            min-height: 200px;
+            width: 400px;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 5px;
+            overflow: hidden; /* Nasconde eventuali barre che superano l'altezza del contenitore */
+            }
+
+            .bar {
+            height: 0;
+            width: 100px;
+            margin: 0 10px;
+            background-color: #2196f3;
+            transition: height 1s;
+            }
+
+            .bar1 {
+            background-color: #cda434;
+            }
+
+            .bar2 {
+            background-color: #c0c0c0;
+            }
+
+            .bar3 {
+            background-color: #cd7f32;
+            }
+
+            .bar-value {
+            position: absolute;
+            top: -20px; /* Regola la distanza verticale tra la barra e il valore */
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+          }
+
+            .centerdiv {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .try {
+              top: 5px;
+            }
+
+
+    </style>
+
   </head>
-  
+
   <body>
+
     <header class="destra">
-      <a href="https://github.com/DuPont9029"><img src="https://raw.githubusercontent.com/DuPont9029/equ2g/main/github.ico" class="class"></a>
-    </header> <br> <br>
+        <a href="https://github.com/DuPont9029"><img src="https://raw.githubusercontent.com/DuPont9029/equ2g/main/github.ico" class="class"></a>
+      </header> <br> <br>
+      
+    <div class="centro" style="padding-bottom: 40px">
+      <label class="centro"><a href="https://github.com/DuPont9029">DuPont9029</a> public contributions:</label> 
+      <span id="DuPont9029" class="centro"></span>
+      <img src="https://ghchart.rshah.org/b30000/DuPont9029" alt="DuPont9029 Activity" class="image"> </br> </br>
+      
+      <label class="centro"><a href="https://github.com/KovD3v">KovD3v</a> public contributions:</label>
+      <span id="KovD3v" class="centro"></span> 
+      <img src="https://ghchart.rshah.org/FFD43B/KovD3v" alt="KovD3v Activity" class="image"> </br> <br>
+      
+      <label class="centro"><a href="https://github.com/metoncode">metoncode</a> public contributions:</label>
+      <span id="metoncode" class="centro"></span> 
+      <img src="https://ghchart.rshah.org/ff6600/metoncode" alt="metoncode Activity" class="image"> </br>
+      
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
     
-  <div class="centro">
-    <label class="centro"><a href="https://github.com/DuPont9029">DuPont9029</a> public contributions:</label> 
-    <span id="DuPont9029" class="centro"></span>
-    <img src="https://ghchart.rshah.org/b30000/DuPont9029" alt="DuPont9029 Activity" class="image"> </br> </br>
-    
-    <label class="centro"><a href="https://github.com/KovD3v">KovD3v</a> public contributions:</label>
-    <span id="KovD3v" class="centro"></span> 
-    <img src="https://ghchart.rshah.org/FFD43B/KovD3v" alt="KovD3v Activity" class="image"> </br> <br>
-    
-    <label class="centro"><a href="https://github.com/metoncode">metoncode</a> public contributions:</label>
-    <span id="metoncode" class="centro"></span> 
-    <img src="https://ghchart.rshah.org/ff6600/metoncode" alt="metoncode Activity" class="image"> </br>
-    
-  </div>
-    
+    <div class="podium centerdiv">
+    <div class="bar bar1"><span id="1" ></span></div>
+    <div class="bar bar2"><span id="2" ></span></div>
+    <div class="bar bar3"><span id="3" ></span></div>
+    </div>
+
+
   </body>
 </html>
