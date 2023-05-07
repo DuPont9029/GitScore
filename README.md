@@ -10,4 +10,4 @@
 
 &nbsp;
 
-# This project was created by DuPont9029. Enjoy!
+This project was created by DuPont9029. Enjoy!
