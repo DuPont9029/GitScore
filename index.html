@@ -105,7 +105,12 @@
             if (x > y && x > z)
             {
               // x è il più grande
+
+              
+
               console.error("1 di 1: " + x + " " + y + " " + z + " " + "quindi DuPont9029 ha lavorato di più");
+
+              x = 70;
               //
                document.getElementById("1").textContent = "DuPont9029"; 
               //
@@ -114,11 +119,11 @@
                 // y è il secondo più grande
                 console.error("2 di 1: " + x + " " + y + " " + z + " " + "quindi KovD3v è il secondo che ha lavorato di più");
                 //
-                 y = y + (x - 15); /* valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande */ 
+                 y = 40; /* valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande */ 
                 //
                 document.getElementById("2").textContent = "KovD3v";
                 //
-                 z = z + (y - 15); // valore arbitrario di 12 per far si che il terzo sia il terzo
+                 z = 20; // valore arbitrario di 12 per far si che il terzo sia il terzo
                 //
                 document.getElementById("3").textContent = "metoncode";
               }
@@ -127,11 +132,11 @@
                 // z è il secondo più grande
                 console.error("3 di 1: " + x + " " + y + " " + z + " " + "quindi metoncode è il secondo che ha lavorato di più");
 
-                 z = z + (x - 15); // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
+                 z = 40; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
 
                 document.getElementById("2").textContent = "metoncode";
 
-                 y = y + (z - 15); // valore arbitrario di 12 per far si che il terzo sia il terzo
+                 y = 20; // valore arbitrario di 12 per far si che il terzo sia il terzo
 
                 document.getElementById("3").textContent = "KovD3v";
               }
@@ -140,8 +145,13 @@
 
             else if (y > x && y > z)
             {
+
+             
+
               // y è il più grande
               console.error("1 di 2: " + x + " " + y + " " + z + " " + "quindi KovD3v ha lavorato di più");
+
+              y = 70;
 
               document.getElementById("1").textContent = "KovD3v";
               if (x > z)
@@ -149,11 +159,11 @@
                 // x è il secondo più grande
                 console.error("2 di 2: " + x + " " + y + " " + z + " " + "quindi DuPont9029 è il secondo che ha lavorato di più");
 
-                // x = x + y/2; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
+                x = 40; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
 
                 document.getElementById("2").textContent = "DuPont9029";
 
-                // z = z + y/3 // valore arbitrario di 12 per far si che il terzo sia il terzo
+                z = 20; // valore arbitrario di 12 per far si che il terzo sia il terzo
 
                 document.getElementById("3").textContent = "metoncode";
               }
@@ -162,11 +172,11 @@
                 // z è il secondo più grande
                 console.error("3 di 2: " + x + " " + y + " " + z + " " + "quindi metoncode è il secondo che ha lavorato di più");
 
-                // z = z + y/2; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
+                z = 40 // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
 
                 document.getElementById("2").textContent = "metoncode";
 
-                // x = x + y/3; // valore arbitrario di 12 per far si che il terzo sia il terzo
+                x = 20; // valore arbitrario di 12 per far si che il terzo sia il terzo
 
                 document.getElementById("3").textContent = "DuPont9029";
               }
@@ -178,6 +188,8 @@
               // z è il più grande
               console.error("1 di 3: " + x + " " + y + " " + z + " " + "quindi metoncode ha lavorato di più");
 
+              z = 70;
+
               document.getElementById("1").textContent = "metoncode";
               if (x > y)
               {
@@ -186,6 +198,7 @@
 
                 console.error("2 di 3: " + x + " " + y + " " + z + " " + "quindi DuPont9029 è il secondo che ha lavorato di più");
 
+                x = 40; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
                 // y = y + z/3 // valore arbitrario di 12 per far si che il terzo sia il terzo
 
                 document.getElementById("2").textContent = "DuPont9029";
@@ -199,6 +212,7 @@
 
                 console.error("3 di 3: " + x + " " + y + " " + z + " " + "quindi KovD3v è il secondo che ha lavorato di più");
 
+                y = 40; // valore arbitrario di 35 per far si che il secondo più grande sia più grande del terzo più grande
                 // x = x + z/3; // valore arbitrario di 12 per far si che il terzo sia il terzo
 
                 document.getElementById("2").textContent = "KovD3v";
