@@ -101,6 +101,7 @@
             saveY = y;
             saveZ = z;
             
+            
            
             if (x > y && x > z)
             {
@@ -225,41 +226,8 @@
               console.error("error 9029 exists, evaquate the area immediatly")
             }
 
-            // in case of one
-            
-            if (x == 1)
-            {
-              x = x * 35;
-            }
-            if (y == 1)
-            {
-              y = y * 35;
-            }
-            if (z == 1)
-            {
-              z = z * 35;
-            }
 
-            // in case of less than 15
-
-            if (x < 15 && x > y && x > z)
-            {
-              x = 75;
-              y = 45;
-              z = 10;
-            }
-            if (y < 15 && y > x && y > z)
-            {
-              x = 75;
-              y = 45;
-              z = 10;
-            }
-            if (z < 15)
-            {
-              x = 75;
-              y = 45;
-              z = 10;
-            }
+        
 
 
 
