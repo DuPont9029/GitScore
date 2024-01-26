@@ -1,99 +1,56 @@
-.centro {
-    text-align: center;
-    
-  }
-   
-  .destra {
-    text-align: right;
-  }
+.image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
 
-  .image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-  }
-
-  .class {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    overflow: hidden;
-  }
-
-  .commit {
-    background: #088140;
-    color: #fff;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #000;
-  }
-
-
-  .ninjo {
-    color: #000;
-  }
-
-
-
-
-
-/*--------------------------------------------------------------------------------------------------------*/
-  
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+}
 
 .podium {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        min-height: 200px;
-        width: 400px;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 5px;
-        overflow: hidden; /* Nasconde eventuali barre che superano l'altezza del contenitore */
-        }
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	min-height: 200px;
+	width: 400px;
+	background-color: #fff;
+	border: 2px solid #000;
+	border-radius: 5px;
+	overflow: hidden; /* Nasconde eventuali barre che superano l'altezza del contenitore */
+}
 
-        .bar {
-        height: 0;
-        width: 100px;
-        margin: 0 10px;
-        background-color: #2196f3;
-        transition: height 1s;
-        }
+.bar {
+	height: 0;
+	width: 100px;
+	margin: 0 10px;
+	background-color: #2196f3;
+	transition: height 1s;
+}
 
-        .bar1 {
-        background-color: #cda434;
-        }
+.bar-value {
+	position: absolute;
+	top: -20px; /* Regola la distanza verticale tra la barra e il valore */
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
 
-        .bar2 {
-        background-color: #c0c0c0;
-        }
+.centerdiv {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
-        .bar3 {
-        background-color: #cd7f32;
-        }
-
-        .bar-value {
-        position: absolute;
-        top: -20px; /* Regola la distanza verticale tra la barra e il valore */
-        left: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-        font-weight: bold;
-      }
-
-        .centerdiv {
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .try {
-          top: 5px;
-        }
-
+.logo {
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	overflow: hidden;
+}
