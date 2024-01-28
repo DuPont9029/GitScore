@@ -100,7 +100,7 @@ getTopThreeUsers(users).then(topThreeUsers => {
         document.getElementById("2").textContent = topThreeUsers[1].username;
         document.getElementById("3").textContent = topThreeUsers[2].username;
 
-        }, 3000);
+        }, 1000);
 
 
 });
